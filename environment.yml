@@ -1,0 +1,21 @@
+# Synthetic Azure Machine Learning environment definition.
+# Contoso Health Analytics instructional bundle.
+#
+# Registering this asset with `az ml environment create` provisions
+# no compute; it only creates an environment version in the workspace.
+
+$schema: https://azuremlschemas.azureedge.net/latest/environment.schema.json
+name: contoso-training-env
+version: 1
+description: Synthetic training environment for the Contoso ML release path lab.
+image: mcr.microsoft.com/azureml/openmpi4.1.0-ubuntu22.04:latest
+conda_file:
+  channels:
+    - conda-forge
+  dependencies:
+    - python=3.11
+    - pip=24.0
+    - pip:
+        - scikit-learn==1.5.0
+        - pandas==2.2.2
+        - numpy==1.26.4
