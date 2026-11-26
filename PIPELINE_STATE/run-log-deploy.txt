@@ -1,0 +1,16 @@
+Run #47 -- job: deploy -- step: Log in with Azure (azure/login@v2)
+
+2026-08-14T10:41:07.113Z  Attempting Azure login using OpenID Connect...
+2026-08-14T10:41:07.184Z  Requesting a federated identity token from the GitHub OIDC provider...
+2026-08-14T10:41:07.298Z  Token acquired. Subject claim presented to Microsoft Entra ID:
+                            repo:contoso-health/ml-release:ref:refs/heads/main
+2026-08-14T10:41:07.302Z  Exchanging the token with Microsoft Entra ID for an Azure access token...
+2026-08-14T10:41:07.884Z  Error: AADSTS700213: No matching federated identity record found for presented assertion subject.
+                            Subject received: repo:contoso-health/ml-release:ref:refs/heads/main
+                            Configured subjects on this app registration:
+                              repo:contoso-health/ml-release:environment:development
+                              repo:contoso-health/ml-release:environment:test
+                              repo:contoso-health/ml-release:environment:production
+2026-08-14T10:41:07.902Z  Error: Login failed. The subject claim on the token does not match any federated credential registered on this app.
+                            Check the environment declaration on the workflow job and the subject configured in Entra ID: the environment segment must be present and match the environment name exactly, character for character.
+2026-08-14T10:41:07.906Z  ##[error]Process completed with exit code 1.
