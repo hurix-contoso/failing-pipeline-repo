@@ -1,7 +1,7 @@
 # failing-pipeline-repo (diagnosis)
 
 Contoso Health Analytics -- synthetic repository used for the SC 13
-Module 3 practice assignment, "Diagnose a Failing Pipeline".
+Module 3 practice assignment, "Diagnose a Failing Pipeline"..
 
 Everything in this repository is synthetic and for instructional use
 only. You will not run this pipeline. You will inspect it.
